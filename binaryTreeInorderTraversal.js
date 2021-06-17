@@ -1,3 +1,35 @@
+/*
+  Approaches
+    a. Recursive
+    b. Iterative
+
+*/
+
+var inorderTraversal = function(root) {
+
+  let result = []
+
+  traverse(root)
+
+  function traverse(node){
+
+    if(node === null) return []
+
+    else{
+      traverse(node.left)
+
+      result.push(node.val)
+
+      traverse(node.right)
+
+    }
+  }
+
+  return result
+}
+
+// ----------------------------------------------------------------
+
 var inorderTraversal = function(root) {
 
   let result = []
